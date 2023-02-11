@@ -1,7 +1,9 @@
 import { TextField, makeStyles } from "@mui/material";
 
-const Header = () => {
-  return <TextField label="Header" variant="outlined" />;
+const Header = (setHeaderText: Function) => {
+  return (
+    <TextField label="Header" variant="outlined" onChange={setHeaderText()} />
+  );
 };
 
 export default Header;

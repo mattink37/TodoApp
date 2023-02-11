@@ -1,11 +1,11 @@
 import { Grid } from "@mui/material";
 
-const Body = () => {
+const Body: React.FC<{ itemList: JSX.Element[] }> = (props) => {
   return (
     <>
-      <Grid item>item 1</Grid>
-      <Grid item>item 2</Grid>
-      <Grid item>item 3</Grid>
+      {props.itemList.map((item) => (
+        <Grid item>{item}</Grid>
+      ))}
     </>
   );
 };
